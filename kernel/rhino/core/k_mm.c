@@ -233,8 +233,8 @@ void show_mm()
 #if (K_MM_STATISTIC > 0)
 
     printf("     free     |     used     |     maxused\r\n");
-    printf("  %10d  |  %10d  |  %10d\r\n", g_kmm_head->free_size, g_kmm_head->used_size,
-           g_kmm_head->maxused_size);
+    printf("  %10u  |  %10u  |  %10u\r\n", (unsigned int)g_kmm_head->free_size, (unsigned int)g_kmm_head->used_size,
+           (unsigned int)g_kmm_head->maxused_size);
     printf("\r\n");
 #endif
 }

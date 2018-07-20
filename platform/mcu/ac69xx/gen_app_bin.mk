@@ -1,0 +1,9 @@
+
+GEN_APP_BIN_SCRIPT := "$(SOURCE_ROOT)/platform/mcu/$(HOST_MCU_FAMILY)/scripts/gen_app_bin"
+
+EXTRA_POST_BUILD_TARGETS += gen_app_bin
+
+APP_BIN_OUTPUT_FILE := $(LINK_OUTPUT_FILE:$(LINK_OUTPUT_SUFFIX)=.app)
+
+gen_app_bin:
+	$(eval OUT_MSG := $(shell $(GEN_APP_BIN_SCRIPT) $(OBJCOPY) $(LINK_OUTPUT_FILE) $(APP_BIN_OUTPUT_FILE)))

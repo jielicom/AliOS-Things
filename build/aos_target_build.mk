@@ -260,8 +260,8 @@ endif
 # handle lds file, lds -> ld
 $(foreach ldsfile,$(AOS_SDK_LDS_FILES),$(eval $(call PROCESS_LDS_FILE,$(ldsfile))))
 $(foreach ldsfile,$(AOS_SDK_LDS_INCLUDES),$(eval $(call PROCESS_LDS_FILE,$(ldsfile))))
-$(foreach ldsfile,$(AOS_SDK_LDS_FILES),$(eval AOS_SDK_LDFLAGS += -T $(notdir $(ldsfile:.ld.S=.ld))))
 $(if $(AOS_SDK_LDS_FILES),$(eval AOS_SDK_LDFLAGS += -L $(LDS_FILE_DIR)))
+$(foreach ldsfile,$(AOS_SDK_LDS_FILES),$(eval AOS_SDK_LDFLAGS += -T $(notdir $(ldsfile:.ld.S=.ld))))
 
 ifneq (,$(BINS))
 $(PROCESS_PRECOMPILED_FILES): $(PRECOMPILED_FILES)

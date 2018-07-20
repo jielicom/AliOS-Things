@@ -75,8 +75,8 @@ static kstat_t task_create(ktask_t *task, const name_t *name, void *arg,
     task->stack_size    = stack_size;
     task->mm_alloc_flag = mm_alloc_flag;
     task->cpu_num       = cpu_num;
-    cpu_binded          = cpu_binded;
-    i                   = i;
+    // task->cpu_binded    = cpu_binded;
+    // i                   = i;
 
 #if (RHINO_CONFIG_CPU_NUM > 1)
     task->cpu_binded    = cpu_binded;

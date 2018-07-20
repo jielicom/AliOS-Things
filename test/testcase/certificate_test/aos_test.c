@@ -7,16 +7,16 @@
 #include "cutest/cut.h"
 
 #ifndef SYSINFO_ARCH
-#define SYSINFO_ARCH        ""
+#define SYSINFO_ARCH        "pi32"
 #endif
 #ifndef SYSINFO_MCU
-#define SYSINFO_MCU         ""
+#define SYSINFO_MCU         "ac69xx"
 #endif
 #ifndef SYSINFO_DEVICE_NAME
-#define SYSINFO_DEVICE_NAME ""
+#define SYSINFO_DEVICE_NAME "ac691x"
 #endif
 #ifndef SYSINFO_APP_VERSION
-#define SYSINFO_APP_VERSION ""
+#define SYSINFO_APP_VERSION "0.0.1"
 #endif
 #define SYSINFO_KERNEL      "AOS"
 

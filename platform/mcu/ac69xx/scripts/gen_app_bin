@@ -1,0 +1,11 @@
+#!/bin/bash
+
+textfile=$(mktemp /tmp/gen_app_bin.XXXXXX)
+datafile=$(mktemp /tmp/gen_app_bin.XXXXXX)
+
+$1 -j .text -O binary $2 $textfile
+$1 -j .data -O binary $2 $datafile
+cat $textfile $datafile > $3
+
+rm $textfile
+rm $datafile

@@ -5,4 +5,4 @@ $(NAME)_COMPONENTS := rhino
 $(NAME)_COMPONENTS += modules.fs.kv
 $(NAME)_COMPONENTS += yloop
 
-$(NAME)_CFLAGS += -Wall -Werror -Wno-unused-varible
+$(NAME)_CFLAGS += -Wall -Werror -Wno-unused-variable

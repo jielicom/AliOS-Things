@@ -4,6 +4,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <aos/aos.h>
 
 #ifdef VCALL_RHINO
@@ -181,7 +182,7 @@ uint32_t dumpsys_task_func(char *buf, uint32_t len, int detail)
         #else
         snprintf(tmpbuf, 255, "%s%-19s%-9s%-5d%-10d%-12u%-9u%-11c\r\n",
                  esc_tag, task_name, cpu_stat[taskstate], task->prio,
-                 task->stack_size, free_size, (unsigned int)time_total, yes);
+                 task->stack_size, (unsigned int)free_size, (unsigned int)time_total, yes);
         #endif
 #endif
         safesprintf(printbuf, totallen, offset, tmpbuf);

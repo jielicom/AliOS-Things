@@ -26,7 +26,9 @@ int application_start(int argc, char **argv)
 #else
     aos_cli_register_command(&ncmd);
     LOG("Please enter command via CLI: \r\n");
-    aos_loop_run();
+    while (1) {
+        aos_msleep(1000);
+    }
     return 0;
 #endif
 
